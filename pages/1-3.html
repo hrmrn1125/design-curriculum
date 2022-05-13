@@ -17,13 +17,13 @@ a:active, a:hover { outline: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .footnote-line { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) { 
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
+@media screen and (max-width: 500px) {
+    body.typora-export { padding-left: 0px; padding-right: 0px; }
+    #write { padding-left: 20px; padding-right: 20px; }
+    .CodeMirror-sizer { margin-left: 0px !important; }
+    .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -85,14 +85,14 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print { 
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
+@media print {
+    body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+    #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+    .typora-export * { -webkit-print-color-adjust: exact; }
+    .typora-export #write { break-after: avoid; }
+    .typora-export #write::after { height: 0px; }
+    .is-mac table { break-inside: avoid; }
+    .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -122,11 +122,11 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+@media screen and (max-width: 48em) {
+    .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+    .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+    .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+    .md-toc-h6 .md-toc-inner { margin-left: 8em; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
@@ -159,8 +159,8 @@ mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
-@media print { 
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+@media print {
+    .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 .md-diagram-panel .messageText { stroke: none !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
@@ -174,11 +174,11 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
 .typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) { 
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+@media screen and (max-width: 1024px) {
+    .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
 }
-@media screen and (max-width: 800px) { 
-  .typora-export-sidebar { display: none; }
+@media screen and (max-width: 800px) {
+    .typora-export-sidebar { display: none; }
 }
 .outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
@@ -223,7 +223,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
   /* open-sans-italic - latin-ext_latin */
     /* open-sans-700 - latin-ext_latin */
     /* open-sans-700italic - latin-ext_latin */
-  html {
+html {
     font-size: 16px;
 }
 
@@ -235,8 +235,8 @@ body {
 
 #write {
     max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
+    margin: 0 auto;
+    padding: 30px;
     padding-bottom: 100px;
 }
 
@@ -343,7 +343,7 @@ h5 {
     font-size: 1em;
 }
 h6 {
-   font-size: 1em;
+    font-size: 1em;
     color: #777;
 }
 p,
@@ -459,7 +459,7 @@ code {
 
 
 .md-task-list-item > input {
-  margin-left: -1.3em;
+    margin-left: -1.3em;
 }
 
 @media print {
@@ -594,7 +594,7 @@ header, .context-menu, .megamenu-content, footer{
 
 .menu-item-container a.menu-style-btn {
     background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
 }
 
 
@@ -602,6 +602,25 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>1. Vue.jsとは</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='1-vuejsとは'><span>1. Vue.jsとは​</span></h1><h2 id='vueを学ぶにあたって-'><span>Vueを学ぶにあたって </span>🐰</h2><p><span>Vue.jsは世界で最も広く使用されているフロントエンドフレームワークの一つで、Webアプリケーションのユーザーインターフェースを構築するための様々な機能を有しています。</span></p><p><span>昨今のWebフロントエンド開発は数年前に比べ非常に複雑さを増し、クライアントサイドにはより高度な処理が求められるようになっています。状態管理、ルーティング、バリデーションなどアプリケーションにおける多くの処理がバックエンドからフロントエンドへと移行してきました。</span></p><p><span>Vue.jsを学ぶにあたって、まず現在のフロントエンド開発はどのような状況にあるのか、またいかにして高度なフレームワークが求められるようになったのかの歴史を知ることは興味深いトピックであり、これからの時代を生きるフロントエンドエンジニアとして重要な知識となっていくことでしょう。</span></p><p><span>もし、あなたが技術的なチュートリアルを優先したいのであればこのトピックは読み飛ばしてしまっても構いません。</span><a href='https://taiga-ebihara.github.io/Vue-curriculum/pages/2-0.html'><span>2. Vue.jsの基本</span></a><span>からVue.jsについての学習を始めましょう。</span></p><p>&nbsp;</p></div></div>
+<div id='write'  class=''>
+    <h1 id='1-vuejsとは'>
+        <span>1. Vue.jsとは​</span>
+    </h1>
+    <h2 id='vueを学ぶにあたって-'>
+        <span>Vueを学ぶにあたって </span>🐰
+    </h2>
+    <p>
+        <span>Vue.jsは世界で最も広く使用されているフロントエンドフレームワークの一つで、Webアプリケーションのユーザーインターフェースを構築するための様々な機能を有しています。</span>
+    </p>
+    <p>
+        <span>昨今のWebフロントエンド開発は数年前に比べ非常に複雑さを増し、クライアントサイドにはより高度な処理が求められるようになっています。状態管理、ルーティング、バリデーションなどアプリケーションにおける多くの処理がバックエンドからフロントエンドへと移行してきました。</span>
+    </p>
+    <p>
+        <span>Vue.jsを学ぶにあたって、まず現在のフロントエンド開発はどのような状況にあるのか、またいかにして高度なフレームワークが求められるようになったのかの歴史を知ることは興味深いトピックであり、これからの時代を生きるフロントエンドエンジニアとして重要な知識となっていくことでしょう。</span>
+    </p>
+    <p>
+        <span>もし、あなたが技術的なチュートリアルを優先したいのであればこのトピックは読み飛ばしてしまっても構いません。</span><a href='https://marinahara.github.io/design-curriculum/'><span>2. Vue.jsの基本</span></a><span>からVue.jsについての学習を始めましょう。</span>
+    </p>
+    <p>&nbsp;</p></div></div>
 </body>
 </html>

@@ -17,13 +17,13 @@ a:active, a:hover { outline: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .footnote-line { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) { 
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
+@media screen and (max-width: 500px) {
+    body.typora-export { padding-left: 0px; padding-right: 0px; }
+    #write { padding-left: 20px; padding-right: 20px; }
+    .CodeMirror-sizer { margin-left: 0px !important; }
+    .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -85,14 +85,14 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print { 
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
+@media print {
+    body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+    #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+    .typora-export * { -webkit-print-color-adjust: exact; }
+    .typora-export #write { break-after: avoid; }
+    .typora-export #write::after { height: 0px; }
+    .is-mac table { break-inside: avoid; }
+    .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -122,11 +122,11 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+@media screen and (max-width: 48em) {
+    .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+    .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+    .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+    .md-toc-h6 .md-toc-inner { margin-left: 8em; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
@@ -159,8 +159,8 @@ mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
-@media print { 
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+@media print {
+    .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 .md-diagram-panel .messageText { stroke: none !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
@@ -174,11 +174,11 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
 .typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) { 
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+@media screen and (max-width: 1024px) {
+    .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
 }
-@media screen and (max-width: 800px) { 
-  .typora-export-sidebar { display: none; }
+@media screen and (max-width: 800px) {
+    .typora-export-sidebar { display: none; }
 }
 .outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
@@ -223,7 +223,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
   /* open-sans-italic - latin-ext_latin */
     /* open-sans-700 - latin-ext_latin */
     /* open-sans-700italic - latin-ext_latin */
-  html {
+html {
     font-size: 16px;
 }
 
@@ -235,8 +235,8 @@ body {
 
 #write {
     max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
+    margin: 0 auto;
+    padding: 30px;
     padding-bottom: 100px;
 }
 
@@ -343,7 +343,7 @@ h5 {
     font-size: 1em;
 }
 h6 {
-   font-size: 1em;
+    font-size: 1em;
     color: #777;
 }
 p,
@@ -459,7 +459,7 @@ code {
 
 
 .md-task-list-item > input {
-  margin-left: -1.3em;
+    margin-left: -1.3em;
 }
 
 @media print {
@@ -594,14 +594,33 @@ header, .context-menu, .megamenu-content, footer{
 
 .menu-item-container a.menu-style-btn {
     background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
 }
 
 
- :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>1.1 Webフロントエンドの変遷</title>
+:root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>1. Vue.jsとは</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='11-webフロントエンドの変遷'><span>1.1 Webフロントエンドの変遷</span></h1><h2 id='webの誕生～サーバーサイドの進化-'><span>Webの誕生～サーバーサイドの進化 </span>🐰</h2><p><span>1990年、欧州原子核研究機構 (CERN) のティム・バーナーズ＝リーらによってインターネット上に世界初のWeb (World Wide Web) が公開されました。この頃のWebは純粋に文書閲覧のためのものでしたので、スタイルシートによる装飾やインタラクティブなWebコンテンツなどは一切ありませんでした。</span></p><p><span>1996年にMicrosoftのInternet Explorer 3.0にJavaScriptが搭載されると、機能的な制限はありつつもWebページをインタラクティブなアプリケーションインターフェースとして使用することが可能になります。ここでクライアントがインターフェースを担当し、サーバーサイドがアプリケーションの処理やデータベース管理を行う古典的なWebシステムが完成しました。このアーキテクチャは形を変えつつも現在まで続くWebシステムの原型となります。</span></p><p><span>このようなWebシステムが完成してからサーバーサイドの技術はさらに発展していきます。Ruby on RailsをはじめとするMVCモデルのWebアプリケーションフレームワークの登場や、WordPressのようなCMSの普及によりECサイトやブログなどの同期通信型のWebアプリケーションが容易に作成できるようになりました。</span></p><p>&nbsp;</p><h2 id='ajaxの登場～フロントエンドの躍進-'><span>Ajaxの登場～フロントエンドの躍進 </span>🐰</h2><p><span>上記のようにサーバーサイドの技術は進化を続けますが、フロントエンドは依然としてページの見た目を整えたり簡単なアニメーションを付与する役割のみを担当していました。</span></p><p><span>しかし2005年、Google社がリリースしたGoogleMapsの衝撃によって、フロントエンドは技術革新を迎えます。GoogleMapsはAjax (JavaScriptを使用して非同期通信を行い、ページ遷移をせずに画面を更新するプログラミング手法) を採用し、デスクトップアプリケーションのような軽快な操作性をWebアプリケーションでも実現しました。UI操作のたびにURL遷移が必要だった従来のWebアプリケーションと異なり、ストレスフリーな操作性が評価され、Ajaxは多くのWeb開発で採用されるようになりました。</span></p><p><span>翌年2006年には、現在まで続くJavaScriptの傑作ライブラリjQueryがリリースされます。jQueryはAjaxの流行により高度なDOM操作が必要になっていた当時のフロントエンド開発の課題を解決し、Web APIとAjaxによる現代的なWebアプリケーション開発の基盤作りに貢献していきました。</span></p><p>&nbsp;</p><h2 id='ecmascript2015以降～現在-'><span>ECMAScript2015以降～現在 </span>🐰</h2><p><span>Ajaxの登場により技術革新を迎えたフロントエンドですが、その進化の勢いはさらに加速することになります。</span></p><p><span>2009年にリリースされたNode.jsはJavaScriptのエコシステムを爆発的に拡大させました。パッケージマネージャーnpmを経由してJavaScriptアプリケーションが頻繁に配布されるようになり、現在でも多種多様なライブラリがWeb開発の現場で用いられています。</span></p><p><span>加えてJavaScript本体にも言語仕様の大幅な強化が加えられます。ECMAScript2015 (JavaScriptの言語仕様) へのアップデートはJavaScriptリリース以来最大の変更でした。構文の追加、変数の宣言、分割代入、アロー関数などプログラミング言語としてのJavaScriptをよりリッチなものにするための数々の変更が加えられました。これらの変更はJavaScriptが単なるページ装飾のための言語でなく、アプリケーション開発において主要な役割を担う言語へと変遷してきたことの証でもあります。</span></p><p><span>このような動きの中でフロントエンドの実装はより複雑さを増し、従来のようなjQueryによるイベント管理型のWebアプリケーションでは、構造が煩雑になってしまう傾向にありました。そんな折に登場したのが、Reactです。</span></p><p><span>Reactの登場によりフロントエンド開発はフレームワークの時代に入ります。jQuery主体のアプリケーション開発から、React, Vue.js, Angularなどのフレームワークを用いたコンポーネント指向のアプリケーション開発が主流になりました。</span></p><p>&nbsp;</p><h2 id='現在のフロントエンド-'><span>現在のフロントエンド </span>🐰</h2><p><span>このようにフロントエンド開発は急速に進化を続けながら、同時にその複雑さを増しています。</span></p><p><span>現在のフロントエンドに求められる役割は十数年前と比較にならないほどに多く、それゆえ開発ツールの変化にも対応していかなければならないのです。</span></p><p><span>幸いなことにVue.jsは主要なフレームワークの中では学習コストが低く、日本語ドキュメントも数多く整備されています。あなたがフレームワーク学習の第一歩としてVue.jsを選んだのであれば、それは良い選択と言えるでしょう。</span></p><p>&nbsp;</p></div></div>
+<div id='write'  class=''>
+    <h1 id='1-vuejsとは'>
+        <span>1. Vue.jsとは​</span>
+    </h1>
+    <h2 id='vueを学ぶにあたって-'>
+        <span>Vueを学ぶにあたって </span>🐰
+    </h2>
+    <p>
+        <span>Vue.jsは世界で最も広く使用されているフロントエンドフレームワークの一つで、Webアプリケーションのユーザーインターフェースを構築するための様々な機能を有しています。</span>
+    </p>
+    <p>
+        <span>昨今のWebフロントエンド開発は数年前に比べ非常に複雑さを増し、クライアントサイドにはより高度な処理が求められるようになっています。状態管理、ルーティング、バリデーションなどアプリケーションにおける多くの処理がバックエンドからフロントエンドへと移行してきました。</span>
+    </p>
+    <p>
+        <span>Vue.jsを学ぶにあたって、まず現在のフロントエンド開発はどのような状況にあるのか、またいかにして高度なフレームワークが求められるようになったのかの歴史を知ることは興味深いトピックであり、これからの時代を生きるフロントエンドエンジニアとして重要な知識となっていくことでしょう。</span>
+    </p>
+    <p>
+        <span>もし、あなたが技術的なチュートリアルを優先したいのであればこのトピックは読み飛ばしてしまっても構いません。</span><a href='https://marinahara.github.io/design-curriculum/'><span>2. Vue.jsの基本</span></a><span>からVue.jsについての学習を始めましょう。</span>
+    </p>
+    <p>&nbsp;</p></div></div>
 </body>
 </html>
