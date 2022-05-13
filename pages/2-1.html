@@ -11,6 +11,7 @@ iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+.img-wrap {height: auto; width: 100%;}
 #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
@@ -526,7 +527,7 @@ code {
     opacity: 1;
 }
 
-.md-toc { 
+.md-toc {
     margin-top:20px;
     padding-bottom:20px;
 }
@@ -599,28 +600,88 @@ header, .context-menu, .megamenu-content, footer{
 
 
 :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>1. Vue.jsとは</title>
+</style><title>2. インターフェースデザインのポイント</title>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
+<body class='typora-export'>
+<div class='typora-export-content'>
 <div id='write'  class=''>
-    <h1 id='1-vuejsとは'>
-        <span>1. Vue.jsとは​</span>
+    <h1 id='2. インターフェースデザインのポイント​'>
+        <span>2. インターフェースデザインのポイント</span>
     </h1>
-    <h2 id='vueを学ぶにあたって-'>
-        <span>Vueを学ぶにあたって </span>🐰
+    <p>&nbsp;</p>
+    <h2 id='2.1 入力手段により異なる適したUI'>
+        <span>2.1 入力手段により異なる適したUI </span>🐰
     </h2>
     <p>
-        <span>Vue.jsは世界で最も広く使用されているフロントエンドフレームワークの一つで、Webアプリケーションのユーザーインターフェースを構築するための様々な機能を有しています。</span>
+        <span>入力手段が異なれば、それにふさわしいインターフェースも変わってきます。</span>
+    </p>
+    <p>&nbsp;</p>
+    <h3 id='ポインティング操作（＝PC）'>
+        <span>ポインティング操作（＝PC）</span>
+    </h3>
+    <ul>
+        <li><span>細かいパーツでもOK（マウスやトラックパッドは細かい操作がしやすいため）</span></li>
+        <li><span>（スペース等）制約が少なく、自由度が高い</span></li>
+        <li><span>ホバーを織り込んだデザインになることが特徴</span></li>
+    </ul>
+    <p>&nbsp;</p>
+    <h3 id='直接接触（＝スマートフォン・タブレット）'>
+        <span>直接接触（＝スマートフォン・タブレット）</span>
+    </h3>
+    <ul>
+        <li><span>要素は大きめに（指やタッチペンは細かい動きが難しい）</span></li>
+        <li><span>アイコンを活用（省スペースのため）</span></li>
+        <li><span>ホバーが無い → 選択できるか触ってみないと分からない → 誤操作回避のためにも単純明快なデザインが必要</span></li>
+    </ul>
+    <p>&nbsp;</p>
+    <p>
+        <span>【例1 カルーセル】</span>
     </p>
     <p>
-        <span>昨今のWebフロントエンド開発は数年前に比べ非常に複雑さを増し、クライアントサイドにはより高度な処理が求められるようになっています。状態管理、ルーティング、バリデーションなどアプリケーションにおける多くの処理がバックエンドからフロントエンドへと移行してきました。</span>
+        <span>ポインティング操作（PC）</span>
+    </p>
+    <div class="img-wrap">
+        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/crsl-ex-pc.png'></img>
+    </div>
+    <p>
+        <span>PCにはスワイプが無いので矢印等を末尾に設置するのが良い。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>直接接触（スマートフォン・タブレット）</span>
+    </p>
+    <div class="img-wrap">
+        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/crsl-ex-sp.png'></img>
+    </div>
+    <p>
+        <span>スワイプを前提とする。見切れ表示で続きがあることを暗示。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>【例2 プルダウン】</span>
     </p>
     <p>
-        <span>Vue.jsを学ぶにあたって、まず現在のフロントエンド開発はどのような状況にあるのか、またいかにして高度なフレームワークが求められるようになったのかの歴史を知ることは興味深いトピックであり、これからの時代を生きるフロントエンドエンジニアとして重要な知識となっていくことでしょう。</span>
+        <span>ポインティング操作（PC）</span>
     </p>
+    <div class="img-wrap">
+        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/pulldown-pc.png'></img>
+    </div>
     <p>
-        <span>もし、あなたが技術的なチュートリアルを優先したいのであればこのトピックは読み飛ばしてしまっても構いません。</span><a href='https://marinahara.github.io/design-curriculum/'><span>2. Vue.jsの基本</span></a><span>からVue.jsについての学習を始めましょう。</span>
+        <span>PCでは小さく配置。見出しタイトルはテキスト主体でレイアウト。</span>
     </p>
-    <p>&nbsp;</p></div></div>
+    <p>&nbsp;</p>
+    <p>
+        <span>直接接触（スマートフォン・タブレット）</span>
+    </p>
+    <div class="img-wrap">
+        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/pulldown-sp.png'></img>
+    </div>
+    <p>
+        <span>タップしやすいよう大きく配置。全ての要素が大きいとごちゃつくので、アイコンを活用し、省スペース化を図る。</span>
+    </p>
+    <p>&nbsp;</p>
+    <a href='https://marinahara.github.io/design-curriculum/'><span>目次へもどる</span></a>
+</div>
+</div>
 </body>
 </html>
