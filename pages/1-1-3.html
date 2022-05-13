@@ -11,6 +11,7 @@ iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+.ui-img-wrap {height: 500px; width: 100%;}
 #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
@@ -526,7 +527,7 @@ code {
     opacity: 1;
 }
 
-.md-toc { 
+.md-toc {
     margin-top:20px;
     padding-bottom:20px;
 }
@@ -601,12 +602,13 @@ header, .context-menu, .megamenu-content, footer{
 :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
 </style><title>1. UIとデザイン</title>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
+<body class='typora-export'>
+<div class='typora-export-content'>
 <div id='write'  class=''>
-    <h1 id='1-vuejsとは'>
+    <h1 id='1. UIとデザイン​'>
         <span>1. UIとデザイン​</span>
     </h1>
-    <h2 id='vueを学ぶにあたって-'>
+    <h2 id='1.1 UIとUXの密接なかかわり'>
         <span>1.1 UIとUXの密接なかかわり </span>🐰
     </h2>
     <p>
@@ -621,6 +623,11 @@ header, .context-menu, .megamenu-content, footer{
     <p>
         <span>「UI」「UX」の関係を簡単に図にすると以下のようになります。</span>
     </p>
-    <p>&nbsp;</p></div></div>
+    <p>&nbsp;</p>
+    <div class="ui-img-wrap">
+        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/UI.png'></img>
+    </div>
+</div>
+</div>
 </body>
 </html>
