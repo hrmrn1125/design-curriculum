@@ -11,6 +11,8 @@ iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+.img-wrap {height: auto; width: 100%;}
+.img-wrap.half {height: auto; width: 50%;}
 #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
@@ -599,141 +601,104 @@ header, .context-menu, .megamenu-content, footer{
 
 
 :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>0 はじめに</title>
+</style><title>5. ​Illustratorの使い方</title>
 </head>
 <body class='typora-export'>
 <div class='typora-export-content'>
 <div id='write'  class=''>
-    <h1 id='Web Design Curriculum'>
-        <span>Web Design Curriculum</span>
+    <h1 id='5. ​Illustratorの使い方​'>
+        <span>5. ​Illustratorの使い方​</span>
     </h1>
     <p>&nbsp;</p>
-    <h2 id='はじめに'>
-        <span>はじめに</span>
+    <h2 id='5.1 Illustratorの特徴'>
+        <span>5.1 Illustratorの特徴 </span>🐰
     </h2>
-    <h3 id='Web Design Curriculum へようこそ！'>
-        <span>Web Design Curriculum へようこそ！</span>
+    <p>
+        <span>Illustratorは、アドビシステムズ社が開発している、グラフィックデザインを行うためのソフトウェアです。利用範囲は非常に広く、次のような場面で使われています。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>・イラストの描画・編集</span>
+    </p>
+    <p>
+        <span>・グラフィックデザイン</span>
+    </p>
+    <p>
+        <span>・さまざまな商用印刷物の制作</span>
+    </p>
+    <p>
+        <span>・Webデザイン</span>
+    </p>
+    <p>
+        <span>・パッケージデザイン</span>
+    </p>
+    <p>
+        <span>・DTP</span>
+    </p>
+    <p>
+        <span>・企業のCIやロゴ、ピクトグラムなどの制作</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>上記は一般的な用途ですが、Illustratorにはさまざまな機能があるため、使い方次第であらゆる場面に活用できる万能ツールと言えます！</span>
+    </p>
+    <p>&nbsp;</p>
+    <h3>
+        <span>直感的なドラッグ操作と細やかな数値指定</span>
     </h3>
     <p>
-        <span>このカリキュラムは、Webデザインに必要な基本の考え方〜ツールの使い方〜実践までが学べるスタータープログラムです！</span>
-    </p>
-    <p>&nbsp;</p>
-    <h3 id='このカリキュラムで想定している対象者について'>
-        <span>このカリキュラムで想定している対象者について</span>
-    </h3>
-    <ul>
-        <li><span>HTML, CSS の基本的な知識や記述を理解している</span></li>
-        <li><span>Webデザインの初学者である</span></li>
-    </ul>
-    <p>&nbsp;</p>
-    <h3 id='カリキュラムの進め方'>
-        <span>カリキュラムの進め方</span>
-    </h3>
-    <p>
-        <span>このカリキュラムではWebデザインの基本的なトピックについて解説し、チャレンジ課題を提供します。</span>
-    </p>
-    <p>
-        <span>各トピックの隣には以下のアイコンが記載されていて、取り扱う内容のレベルを表しています。</span>
+        <span>Illustratorで描かれたグラフィックを見ると、「素人ではとても描けない」と思うこともあるかもしれません。しかし実際はそんなことはありません。</span>
+        <span>何故かというと、Illustratorでは、「パーツごとに描画し、描画したパーツを重ねて組み合わせる」ことでイラストを制作することが多いからです。</span>
+        <span>ゼロから絵を描くように制作をしていくのではなく、「どのようなパーツを組み合わせればいいか」という視点が、Illustratorを使いこなす上では重要です。</span>
     </p>
     <p>&nbsp;</p>
     <p>
-        <span>🐸 &lt; カエルは基本情報だよ! Vue.jsを触る上で必須となる知識!</span>
-    </p>
-    <p>
-        <span>🐰 &lt; ウサギは補足情報だよ! 現場に入る前に知っておきたい知識!</span>
-    </p>
-    <p>
-        <span>🐯 &lt; トラは中～上級トピックだよ! 詳しく知りたい技術者向け!</span>
+        <span>また、Illustratorでは、イラストの描画や変形、配置、着色などを行うにあたって、主に次の2つの操作方法があります。</span>
     </p>
     <p>&nbsp;</p>
     <p>
-        <span>各テーマの終わりごとにチャレンジ課題に取り組み、メンターへ提出してください。提出物を確認の上、メンターによるフィードバックコメントを返却します。フィードバックには時間がかかる場合がありますので、コメントを待つ間に次のトピックに着手することを推奨します。</span>
+        <span>・ドラッグ操作で直感的に操作する方法</span>
     </p>
     <p>
-        <span>カリキュラムを進めていく中で自力での解決が困難な問題に直面したり、内容に対して疑問点がある時はBacklogにコメントを記載してください。コメントの投稿について頭を悩ますことはありません。気軽なコミュニケーション歓迎です!</span>
+        <span>・数値指定によって正確に操作する方法</span>
     </p>
     <p>&nbsp;</p>
-    <h2 id='目次'>
-        <span>目次</span>
+    <p>
+        <span>どちらの方法が適しているかはケースバイケースで変わりますが、これはIllustratorの大きな特徴なので覚えておきましょう！</span>
+    </p>
+    <p>&nbsp;</p>
+    <h2 id='5.2 ベクター画像とビットマップ画像'>
+        <span>5.2 ベクター画像とビットマップ画像 </span>🐰
     </h2>
-    <ol start=''>
-        <li>
-            <h4 id='UIとデザイン'>
-                <span>UIとデザイン（1〜3まで共通ページに飛びます）</span>
-            </h4>
-            <p><span>1.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>UIとUXの密接なかかわり</span></a></p>
-            <p><span>1.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>デザインとは何か</span></a></p>
-            <p><span>1.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>デザインの必要性</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <span>Illustratorで直接操作できるのは、二進法で表される「デジタル画像」です。</span>
+        <span>デジタル画像は大きく、ベクター画像（ベクトル画像）とビットマップ画像（ラスター画像）の2種類に分類できます。</span>
+        <span>このうち、Illustratorで処理するのは主にベクター画像です。</span>
+    </p>
     <p>&nbsp;</p>
-    <ol start='2'>
-        <li>
-            <h4 id='インターフェースデザインのポイント'>
-                <span>インターフェースデザインのポイント</span>
-            </h4>
-            <p><span>2.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/2-1.html'><span>入力手段により異なる適したUI</span></a></p>
-        </li>
-    </ol>
+    <h3>
+        <span>ベクター画像</span>
+    </h3>
+    <p>
+        <span>ベクター画像は、点（アンカーポイント）と線（セグメント）で構成される「パス」で表現される画像です。</span>
+        <span>ベクター画像にはピクセルという概念はなく、表示するたびに座標値を計算し直して描画します。そのため、画像を拡大・縮小しても画像は劣化しません。大きく拡大してもエッジの滑らかさが保たれます。</span>
+        <span>反面、ベクター画像では写真のような複雑なカラー階調や微妙なグラデーションは表現できません。</span>
+        <span>ベクター画像は主に、色々なサイズで使用されるロゴや図版などで使われています。</span>
+        <span>主なファイル形式には「ai」「svg」「eps」「emf」「wmf」などがあります。</span>
+    </p>
     <p>&nbsp;</p>
-    <ol start='3'>
-        <li>
-            <h4 id='人間の認知特性とデザイン'>
-                <span>人間の認知特性とデザイン（1〜3まで共通ページに飛びます）</span>
-            </h4>
-            <p><span>3.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>色を瞬時に見分ける力</span></a></p>
-            <p><span>3.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>形を瞬時に見分ける力</span></a></p>
-            <p><span>3.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>動きや変化を見つける力</span></a></p>
-        </li>
-    </ol>
+    <h3>
+        <span>ビットマップ画像</span>
+    </h3>
+    <p>
+        <span>ビットマップ画像は、格子状に配置された無数のピクセル（画素）で構成される画像です。</span>
+        <span>1つのピクセルは1つの色のみを表します。ビットマップ画像を拡大すると、1つ1つのピクセルを確認できます。</span>
+        <span>色の濃淡やカラー階調の微妙なグラデーションも表現できるため、デジタルカメラで撮影した写真や、スキャナで取り込んだイラストなど、様々な分野でビットマップ画像が利用されています。</span>
+        <span>（Photoshopの処理対象は、基本的にはビットマップ画像です）</span>
+        <span>主なファイル形式には「jpg」「png」「tiff」「gif」「psd」などがあります。</span>
+    </p>
     <p>&nbsp;</p>
-    <ol start='4'>
-        <li>
-            <h4 id='配色に関して'>
-                <span>配色に関して</span>
-            </h4>
-            <p><span>4.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-1.html'><span>色のもつ意味</span></a></p>
-            <p><span>4.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-2-3.html'><span>基本的な配色パターン</span></a></p>
-            <p><span>4.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-2-3.html'><span>ターゲットに合わせた配色をする</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='5'>
-        <li>
-            <h4 id='Illustratorの使い方'>
-                <span>Illustratorの使い方</span>
-            </h4>
-            <p><span>5.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-1-2.html'><span>Illustratorの特徴</span></a></p>
-            <p><span>5.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-1-2.html'><span>ベクター画像とビットマップ画像</span></a></p>
-            <p><span>5.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-3.html'><span>基本操作</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='6'>
-        <li>
-            <h4 id='Photoshopの使い方'>
-                <span>Photoshopの使い方</span>
-            </h4>
-            <p><span>6.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1.html'><span>​Photoshopの特徴</span></a></p>
-            <p><span>6.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-2.html'><span>色のもつ意味</span></a></p>
-            <p><span>6.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-3.html'><span>基本的な配色パターン</span></a></p>
-            <p><span>6.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-4-5.html'><span>形を瞬時に見分ける力</span></a></p>
-            <p><span>6.5 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-4-5.html'><span>動きや変化を見つける力</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='7'>
-        <li>
-            <h4 id='Figmaの使い方'>
-                <span>Figmaの使い方</span>
-            </h4>
-            <p><span>7.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1.html'><span>色を瞬時に見分ける力</span></a></p>
-            <p><span>7.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-2.html'><span>色のもつ意味</span></a></p>
-            <p><span>7.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-3.html'><span>基本的な配色パターン</span></a></p>
-            <p><span>7.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-4-5.html'><span>形を瞬時に見分ける力</span></a></p>
-            <p><span>7.5 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-4-5.html'><span>動きや変化を見つける力</span></a></p>
-        </li>
-    </ol>
+    <a href='https://marinahara.github.io/design-curriculum/'><span>目次へもどる</span></a>
 </div>
 </div>
 </body>
