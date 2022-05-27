@@ -601,52 +601,68 @@ header, .context-menu, .megamenu-content, footer{
 
 
 :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>7. ​Adobe XDの使い方</title>
+</style><title>8. ​Figmaの使い方</title>
 </head>
 <body class='typora-export'>
 <div class='typora-export-content'>
 <div id='write'  class=''>
-    <h1 id='7. ​Adobe XDの使い方​'>
-        <span>7. ​Adobe XDの使い方​</span>
+    <h1 id='8. ​Figmaの使い方​'>
+        <span>8. ​Figmaの使い方</span>
     </h1>
     <p>&nbsp;</p>
-    <h2 id='7.2 XDの基本操作'>
-        <span>7.2 XDの基本操作</span>
+    <h2 id='8.4 ​コンポーネント'>
+        <span>8.4 ​コンポーネント</span>
     </h2>
+    <h3>
+        <span>コンポーネントとは</span>
+    </h3>
     <p>
-        <span>ここからXD操作の実践に入ります！リンクをクリックして視聴開始してください。</span>
-        <span>（制作物の提出は必須ではありませんが、何か困ったことがあったり、制作物を見てほしい場合はメンターにいつでも連絡してください！）</span>
+        <span>UIデザインにおけるコンポーネントとは、デザイン全体で再利用できるUIの要素のことをいいます。</span>
+        <span>ボタンやアイコン、ヘッダー、フッターなど、同じデザインの要素を各ページで毎回つくるのではなく、再利用することで作業時間の短縮、プロジェクトで一貫したデザインの作成、メンテナンスしやすいデザインデータを作ることができます。</span>
     </p>
     <p>&nbsp;</p>
     <h3>
-        <span>ワイヤーフレームを作る</span>
+        <span>ボタンをコンポーネント化</span>
     </h3>
     <p>
-        <a href='https://helpx.adobe.com/jp/xd/how-to/beginners-tutorial-1.html'><span>作業開始〜描画ツールの使い方などについて習得しましょう</span></a>
-    </p>
-    <p>&nbsp;</p>
-    <h3>
-        <span>デザインカンプ〜プロトタイプを作る</span>
-    </h3>
-    <p>
-        <a href='https://helpx.adobe.com/jp/xd/how-to/beginners-tutorial-2.html'><span>素材の配置やプロトタイプ制作などについて習得しましょう</span></a>
-    </p>
-    <p>&nbsp;</p>
-    <h3>
-        <span>PhotoshopとXDの連携</span>
-    </h3>
-    <p>
-        <a href='https://helpx.adobe.com/jp/xd/how-to/beginners-tutorial-3.html'><span>便利なPhotoshopとXDの連携について習得しましょう</span></a>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-        <span>ここまでで基本中の基本の操作は習得できました！</span>
-        <span>物足りない……という方は、いや、そうでなくても、その他のチュートリアルも網羅してみてください！</span>
-        <span>XDに関してはAdobeがYouTubeを一挙にまとめてくれている ＆ XD検定が無料で簡単に受けられます。習熟度を測るためにぜひご受検ください！</span>
+        <span>（1）コンポーネント化するには作成したボタンを選択し、右クリックで Create Component を選択します。</span>
+        <span> ショートカットキーは ⌘ + Option + K （Win: Ctrl + K） です。</span>
     </p>
     <p>
-        <a href='https://xdtrail.com/tutorial/'><span>XDチュートリアル各種</span></a>
-        <a href='https://kentei.adobe.com/top'><span>XD検定</span></a>
+        <span>（2）画面左側のレイヤーパネルの表示が4つのひし形に変わったのが確認できます。</span>
+        <div class="img-wrap">
+            <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/master.png'></img>
+        </div>
+        <span> この4つのひし形の要素を「マスターコンポーネント」と呼びます。</span>
+        <span> このマスターコンポーネントを再利用することで作業の効率化などを図ることができます。</span>
+        <span> マスターコンポーネントからコピーして制作した要素を「インスタンス」と呼び、コンポーネントを再利用した要素となります。</span>
+        <span> インスタンスはマスターコンポーネントで編集した色やテキストのプロパティを引き継ぐことができ、他のマスターコンポーネントに瞬時に切り替えたり、一部の要素を上書きすることができます。</span>
+    </p>
+    <p>
+        <span>（3）インスタンスはマスターコンポーネントのプロパティを引き継ぐだけでなく、テキストやプロパティを直接上書き（Override）することができます。</span>
+        <span> 例えば、ボタンは使われるシーンによって「登録する」や「キャンセル」といった文言に変わるので、必要に応じてインスタンス上書きすることができます。</span>
+        <span> 位置やサイズは上書きすることができません。</span>
+        <span> 位置やサイズを変更したい場合は、インスタンスを右クリックから Detach Instance でインスタンス自体を解除することで変更できます。</span>
+        <span> ショートカットキーは ⌘ + Option + B （Win: Ctrl + B）です。</span>
+        <span> 再びインスタンスに戻すことはできないので、注意してください。</span>
+    </p>
+    <p>
+        <span>（4）コンポーネントのメリットは他にもあり、既存のインスタンスを他のマスターコンポーネントのインスタンスに変更することもできます。</span>
+        <span> プロパティパネルのInstanceから他のマスターコンポーネントを選択することで、背景の色などを他のマスターコンポーネント同様に変えることができます。</span>
+    </p>
+    <p>
+        <span>（5）コンポーネントは、主に要素自体を再利用していましたが、色やフォントなどのプロパティは Stylesに登録することで再利用が可能になります。</span>
+    </p>
+    <p>
+        <span>（6）実際にスタイルを作ってみましょう。四角形の要素を3つ用意して、それぞれの Fill を赤、青、緑で区分しておきます。</span>
+        <span> 赤をクリックして、Fill の右の4つの●をクリックし、さらに + をクリックして、スタイル名を「figma_red」と入力します。</span>
+        <div class="img-wrap half">
+            <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/dots.png'></img>
+        </div>
+        <div class="img-wrap">
+            <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/style.png'></img>
+        </div>
+        <span> これで色のスタイルが作成されました。</span>
     </p>
     <p>&nbsp;</p>
     <a href='https://marinahara.github.io/design-curriculum/'><span>目次へもどる</span></a>
