@@ -601,68 +601,97 @@ header, .context-menu, .megamenu-content, footer{
 
 
 :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>9. ​デザイン実務に入る前に</title>
+</style><title>9. ​Figmaの使い方</title>
 </head>
 <body class='typora-export'>
 <div class='typora-export-content'>
 <div id='write'  class=''>
-    <h1 id='9. ​デザイン実務に入る前に'>
-        <span>9. ​デザイン実務に入る前に​</span>
+    <h1 id='9. ​Figmaの使い方​'>
+        <span>9. ​Figmaの使い方</span>
     </h1>
     <p>&nbsp;</p>
-    <h2 id='9.4 競合との向き合い方'>
-        <span>9.4 競合との向き合い方</span>
+    <h2 id='9.4 ​コンポーネント'>
+        <span>9.4 ​コンポーネント</span>
     </h2>
+    <h3>
+        <span>コンポーネントとは</span>
+    </h3>
     <p>
-        <span>どのジャンル、どのカテゴリーでも競合となるライバルは存在します。</span>
+        <span>UIデザインにおけるコンポーネントとは、デザイン全体で再利用できるUIの要素のことをいいます。</span>
     </p>
     <p>
-        <span>競合がいてもよく観察することで、より良いデザインを作ることができます。</span>
+        <span>ボタンやアイコン、ヘッダー、フッターなど、同じデザインの要素を各ページで毎回つくるのではなく、再利用することで作業時間の短縮、プロジェクトで一貫したデザインの作成、メンテナンスしやすいデザインデータを作ることができます。</span>
     </p>
     <p>&nbsp;</p>
     <h3>
-        <span>競合を把握する</span>
+        <span>ボタンをコンポーネント化</span>
     </h3>
     <p>
-        <span>デザインを行う上で競合となる商材、ライバルの存在は無視することはできません。何もリサーチをせずにデザインし始めるのは危険ですし、コンセプトも固まりづらくなります。</span>
-    </p>
-    <p>
-        <span>リサーチせずに作ったデザインが、意図せずとも競合のデザインに似てしまうこともあるかもしれません。</span>
-    </p>
-    <p>
-        <span>またあまりに「業界のカラー」からかけ離れたデザインをしてしまい、逆にユーザーから認識されず、デザインが機能しなくなることもあります。</span>
+        <span>（1）コンポーネント化するには作成したボタンを選択し、右クリックで Create Component を選択します。</span>
+        <span> ショートカットキーは ⌘ + Option + K （Win: Ctrl + K） です。</span>
     </p>
     <p>&nbsp;</p>
-    <h3>
-        <span>差別化するポイントを選ぶ</span>
-    </h3>
     <p>
-        <span>競合の観察・分析ができると差別化ポイントが見えてきます。</span>
+        <span>（2）画面左側のレイヤーパネルの表示が4つのひし形に変わったのが確認できます。</span>
+        <p>&nbsp;</p>
+        <div class="img-wrap">
+            <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/master.png'></img>
+        </div>
+        <p>&nbsp;</p>
     </p>
     <p>
-        <span>まずは差別化できそうだなと感じたポイントをピックアップし、そこから長所を見つけてみてください。それがデザインの手がかりになります。</span>
+        <span> この4つのひし形の要素を「マスターコンポーネント」と呼びます。</span>
+        <span> このマスターコンポーネントを再利用することで作業の効率化などを図ることができます。</span>
     </p>
     <p>
-        <span>もしイメージが湧かない場合は、そこまで大きな差別化ができずとも、構成や形、色や大きさなど目に見える部分で差別化を少し意識すれば、おのずとオリジナリティのあるデザインになっていきます。（他社のサイト分析をできていることが前提）</span>
+        <span> マスターコンポーネントからコピーして制作した要素を「インスタンス」と呼び、コンポーネントを再利用した要素となります。</span>
     </p>
     <p>
-        <span>また、差別化ポイントは目に見えることだけではありません。例えばユーザーのサイトを見る時間帯によってコンテンツを変化させるなど、タイミングをデザインすることも可能性としてはあり得ます。</span>
+        <span> インスタンスはマスターコンポーネントで編集した色やテキストのプロパティを引き継ぐことができ、他のマスターコンポーネントに瞬時に切り替えたり、一部の要素を上書きすることができます。</span>
     </p>
     <p>&nbsp;</p>
-    <h3>
-        <span>観察力を身につける</span>
-    </h3>
     <p>
-        <span>いきなりすべての競合の特徴を把握することは不可能です。</span>
+        <span>（3）インスタンスはマスターコンポーネントのプロパティを引き継ぐだけでなく、テキストやプロパティを直接上書き（Override）することができます。</span>
     </p>
     <p>
-        <span>大事なのは、普段から社会にアンテナを張り、動向を探る癖づけをしておくことです。</span>
+        <span> 例えば、ボタンは使われるシーンによって「登録する」や「キャンセル」といった文言に変わるので、必要に応じてインスタンス上書きすることができます。</span>
+        <span> 位置やサイズは上書きすることができません。</span>
     </p>
     <p>
-        <span>また、社会は連動しているので、一つの物事にもたくさんの物事がかかわっています。</span>
+        <span> 位置やサイズを変更したい場合は、インスタンスを右クリックから Detach Instance でインスタンス自体を解除することで変更できます。</span>
+        <span> ショートカットキーは ⌘ + Option + B （Win: Ctrl + B）です。</span>
     </p>
     <p>
-        <span>それぞれの立場になったときにどう見えてくるか？という多角的な視点を養っておきましょう。</span>
+        <span> 再びインスタンスに戻すことはできないので、注意してください。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>（4）コンポーネントのメリットは他にもあり、既存のインスタンスを他のマスターコンポーネントのインスタンスに変更することもできます。</span>
+        <span> プロパティパネルのInstanceから他のマスターコンポーネントを選択することで、背景の色などを他のマスターコンポーネント同様に変えることができます。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>（5）コンポーネントは、主に要素自体を再利用していましたが、色やフォントなどのプロパティは Stylesに登録することで再利用が可能になります。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>（6）実際にスタイルを作ってみましょう。
+    </p>
+    <p>
+        <span>四角形の要素を3つ用意して、それぞれの Fill を赤、青、緑で区分しておきます。</span>
+    </p>
+    <p>
+        <span> 赤をクリックして、Fill の右の4つの●をクリックし、さらに + をクリックして、スタイル名を「figma_red」と入力します。</span>
+        <p>&nbsp;</p>
+        <div class="img-wrap half">
+            <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/dots.png'></img>
+        </div>
+        <p>&nbsp;</p>
+        <div class="img-wrap">
+            <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/style.png'></img>
+        </div>
+        <p>&nbsp;</p>
+        <span> これで色のスタイルが作成されました。</span>
     </p>
     <p>&nbsp;</p>
     <a href='https://marinahara.github.io/design-curriculum/'><span>目次へもどる</span></a>
