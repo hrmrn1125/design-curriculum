@@ -11,6 +11,8 @@ iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+.img-wrap {height: auto; width: 100%;}
+.img-wrap.half {height: auto; width: 50%;}
 #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
@@ -599,218 +601,289 @@ header, .context-menu, .megamenu-content, footer{
 
 
 :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>0 はじめに</title>
+</style><title>13. ​メインビジュアル制作実践</title>
 </head>
 <body class='typora-export'>
 <div class='typora-export-content'>
 <div id='write'  class=''>
-    <h1 id='Web Design Curriculum'>
-        <span>Web Design Curriculum</span>
+    <h1 id='13. ​メインビジュアル制作実践​'>
+        <span>13. ​メインビジュアル制作実践</span>
     </h1>
     <p>&nbsp;</p>
-    <h2 id='はじめに'>
-        <span>はじめに</span>
+    <h2 id='13.1 メインビジュアルの基本知識'>
+        <span>13.1 メインビジュアルの基本知識</span>
     </h2>
-    <h3 id='Web Design Curriculum へようこそ！'>
-        <span>Web Design Curriculum へようこそ！</span>
-    </h3>
     <p>
-        <span>このカリキュラムは、Webデザインに必要な基本の考え方〜ツールの使い方〜実践までが学べるスタータープログラムです！</span>
+        <span>ここからメインビジュアル制作の実践に入ります！まずはメインビジュアルに関する基本知識の解説をします。</span>
     </p>
     <p>&nbsp;</p>
-    <h3 id='このカリキュラムで想定している対象者について'>
-        <span>このカリキュラムで想定している対象者について</span>
-    </h3>
-    <ul>
-        <li><span>HTML, CSS の基本的な知識や記述を理解している</span></li>
-        <li><span>Webデザインの初学者である</span></li>
-    </ul>
-    <p>&nbsp;</p>
-    <h3 id='カリキュラムの進め方'>
-        <span>カリキュラムの進め方</span>
+    <h3>
+        <span>メインビジュアルとは</span>
     </h3>
     <p>
-        <span>このカリキュラムではWebデザインの基本的なトピックについて解説し、チャレンジ課題を提供します。</span>
-        <span>チャレンジ課題に取り組んだら、メンターへ提出してください。提出物を確認の上、メンターによるフィードバックコメントを返却します。フィードバックには時間がかかる場合がありますので、コメントを待つ間に次のトピックに着手することを推奨します。</span>
-        <span>カリキュラムを進めていく中で自力での解決が困難な問題に直面したり、内容に対して疑問点がある時はSlackや、各デザインツールにコメントを記載してください。</span>
+        <span>メインビジュアルは、「キービジュアル、タイトル画像、ヒーローイメージ」など様々な呼ばれ方をしますが、主にWebサイトの上部にある大きなイメージ画像を指します。</span>
+    </p>
+    <p>
+        <span>近年では強いインパクトを与えるために高さや幅が大きめに取られているメインビジュアルも多く、コンテンツを複数表示させるスライドが実装されていることもあります。</span>
+    </p>
+    <p>&nbsp;</p>
+    <h3>
+        <span>メインビジュアルの役割</span>
+    </h3>
+    <p>
+        <span>メインビジュアルの役割は、そのWebサイトに対するユーザーの関心を一気に引きつけ、その結果として直帰率（そのページだけ見て離脱してしまう割合）を下げること、などが挙げられます。</span>
+    </p>
+    <p>
+        <div>
+            <span>Webサイトにアクセスしたユーザーは、3秒で自分とって有益な情報を得られるサイトかどうかを判断していると言われています。</span>
+        </div>
+        <div>
+            <span>サイトを開いた瞬間に「このサイトに目的のものは無いな」と思われてしまったら、いくら良いコンテンツが載っているサイトでも全く機能しません。</span>
+        </div>
+        <div>
+            <span>メインビジュアルはまさに、Webサイトを機能させるための第一のポイントなのです。</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <h3>
+        <span>メインビジュアルのサイズ</span>
+    </h3>
+    <p>
+        <span>メインビジュアルのサイズを考えるには、ファーストビュー（Webサイトのリンクをクリックして最初に表示されている部分）のサイズを考えなくてはなりません。ファーストビューにはメインビジュアルの他、ヘッダーなどが入ってくることもあります。</span>
+    </p>
+    <p>
+        <span>ファーストビューの最適サイズは、諸説ありますが下記</span>
+    </p>
+    <p>
+        <div>
+            <span>例えば、ディスプレイ広告と呼ばれるバナー広告で有名なGoogle AdSenseのバナーサイズの規定では、横が少し長い長方形の「300px×250px」のレクタングル（中）や「336px×280px」のレクタングル（大）、横長の「728px×90px」のビックバナー、縦長の「300px×600px」のハーフページと呼ばれるサイズなどがあります。</span>
+        </div>
+        <div>
+            <span>モバイルページ向けには「320px×100px」のモバイルバナー（大）もあります。</span>
+        </div>
+        <div>
+            <span>また世の中には他にも、小さいサイズの「88px×31px」などが存在し、設置場所や用途に応じて選ぶというのが一般的です。</span>
+        </div>
+        <div>
+            <span>より詳しくはリンクを参照ください。</span>
+        </div>
+        <div>
+            <a href='https://satori.marketing/marketing-blog/banner/banner/'><span>バナーのサイズやその名前</span></a>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <h3>
+        <span>バナーのレイアウトにはどんなものがあるか？</span>
+    </h3>
+    <p>
+        <span>いくつかバナーのレイアウトパターンをご紹介します。</span>
     </p>
     <p>&nbsp;</p>
     <p>
-        <span>それでは、はりきって進めていきましょう！！</span>
+        <div>
+            <span>1.縦割り・横割りの分割レイアウト</span>
+        </div>
+        <div>
+            <span>主に正方形や正方形に近い形状のバナーで、縦に割ったり、横に割ったりする2分割レイアウトです。</span>
+        </div>
+        <div>
+            <span>分割の割合は、5:5の割合や、7:3や8:2の割合など片方に写真やイラスト、片方にキャッチコピーやテキストを配することでメリハリのある訴求ができます。</span>
+        </div>
     </p>
     <p>&nbsp;</p>
-    <h2 id='目次'>
-        <span>目次</span>
-    </h2>
-    <ol start=''>
-        <li>
-            <h4 id='デザインとは'>
-                <span>デザインとは（1〜4まで共通ページに飛びます）</span>
-            </h4>
-            <p><span>1.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>UIとUXの密接なかかわり</span></a></p>
-            <p><span>1.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>デザインとは何か</span></a></p>
-            <p><span>1.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>デザインの必要性</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>2.要素を複数並べるレイアウト</span>
+        </div>
+        <div>
+            <span>商品が多数ある場合、要素を複数散りばめて配するレイアウトもあります。</span>
+        </div>
+        <div>
+            <span>周囲に複数の要素を並べて、その中心に文字を載せたり、上下左右に4つ要素を配置し、間にキャッチコピーを載せるといったレイアウト方法もあります。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='2'>
-        <li>
-            <h4 id='インターフェースデザインのポイント'>
-                <span>インターフェースデザインのポイント</span>
-            </h4>
-            <p><span>2.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/2-1.html'><span>入力手段により異なる適したUI</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>3.全面レイアウト</span>
+        </div>
+        <div>
+            <span>写真やイラストを全面に配置させて、その写真やイラストに重ねる形でキャッチコピーを配置します。</span>
+        </div>
+        <div>
+            <span>こうすることで、写真やイラストのインパクトを出すことができます。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='3'>
-        <li>
-            <h4 id='人間の認知特性とデザイン'>
-                <span>人間の認知特性とデザイン（1〜3まで共通ページに飛びます）</span>
-            </h4>
-            <p><span>3.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>色を瞬時に見分ける力</span></a></p>
-            <p><span>3.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>形を瞬時に見分ける力</span></a></p>
-            <p><span>3.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>動きや変化を見つける力</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <span>これらが典型的なバナーのレイアウトパターンですが、複数のレイアウトパターンを組み合わせてレイアウトを組むケースもあります。あくまで基本のパターンとしてとらえておくと良いでしょう。</span>
+    </p>
     <p>&nbsp;</p>
-    <ol start='4'>
-        <li>
-            <h4 id='配色に関して'>
-                <span>配色に関して</span>
-            </h4>
-            <p><span>4.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-1.html'><span>色のもつ意味</span></a></p>
-            <p><span>4.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-2-3.html'><span>基本的な配色パターン</span></a></p>
-            <p><span>4.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-2-3.html'><span>ターゲットに合わせた配色をする</span></a></p>
-        </li>
-    </ol>
+    <h3>
+        <span>バナーの作り方</span>
+    </h3>
+    <p>
+        <span>それでは実際の制作ステップを見ていきましょう。</span>
+    </p>
     <p>&nbsp;</p>
-    <ol start='5'>
-        <li>
-            <h4 id='タイポグラフィ・フォントに関して'>
-                <span>タイポグラフィ・フォントに関して</span>
-            </h4>
-            <p><span>5.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-1.html'><span>タイポグラフィとは</span></a></p>
-            <p><span>5.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-2.html'><span>基本的なフォント</span></a></p>
-            <p><span>5.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-3.html'><span>フォントの選び方</span></a></p>
-            <p><span>5.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-4.html'><span>文字組みの基本的なテクニック</span></a></p>
-            <p><span>5.5 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-5.html'><span>文字のレイアウト</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>1. とりあえず何も考えずに要素をぜんぶ並べる</span>
+        </div>
+        <div>
+            <span>細かい部分からデザインを始めてしまうと、途中で「要素を入れ忘れていた！」ということも起こりかねません。</span>
+        </div>
+        <div>
+            <span>また、頭の中だけで考えるのではなく何事も書き出してみる、というのは、どんなデザインにおいても重要な方法です。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='6'>
-        <li>
-            <h4 id='Illustratorの使い方'>
-                <span>Illustratorの使い方</span>
-            </h4>
-            <p><span>6.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/6-1-2.html'><span>Illustratorの特徴</span></a></p>
-            <p><span>6.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/6-1-2.html'><span>ベクター画像とビットマップ画像</span></a></p>
-            <p><span>6.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/6-3.html'><span>Illustratorの基本操作</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>2. 優先順位を決める</span>
+        </div>
+        <div>
+            <span>画像を編集しだす前に、自分なりのストーリー立てをします。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>まず商品のターゲット・ペルソナを考えて、その人がどんなとき、どんな理由でこのバナーを押すのか？を想像してみます。</span>
+        </div>
+        <div>
+            <span>その後に、このバナーを見た人に何を伝えてどういう行動をしてほしいのか、ゴールも考えます。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>そうしたストーリー立てができたら、それに沿ってバナーの要素の中でどれを強調するか、優先順位を決めます。</span>
+        </div>
+        <div>
+            <span>ストーリー立てが難しい場合は、周りの人に聞いてみたりするのもよいかもしれません。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='7'>
-        <li>
-            <h4 id='Photoshopの使い方'>
-                <span>Photoshopの使い方</span>
-            </h4>
-            <p><span>7.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/7-1.html'><span>​Photoshopの特徴</span></a></p>
-            <p><span>7.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/7-2.html'><span>Photoshopの基本操作</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>3. メインビジュアルを決める（素材選び）</span>
+        </div>
+        <div>
+            <span>既に素材がいくつかあれば、その中から一番バランスがよさそうだったり文字が乗りやすそうな素材を選びます。</span>
+        </div>
+        <div>
+            <span>イマイチな写真しかない場合は、加工して良い素材にしましょう。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>プレゼン等々のための素材探しに役立つサイトも紹介しておきます。</span>
+        </div>
+        <div>
+            <a href='https://liginc.co.jp/505025'><span>素材探しに役立つサイト集</span></a>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='8'>
-        <li>
-            <h4 id='Adobe XDの使い方'>
-                <span>Adobe XDの使い方</span>
-            </h4>
-            <p><span>8.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/8-1.html'><span>XDの特徴</span></a></p>
-            <p><span>8.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/8-2.html'><span>XDの基本操作</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>4. 適切なレイアウトを選ぶ</span>
+        </div>
+        <div>
+            <span>先ほど「バナーのレイアウトにはどんなものがあるか？」で紹介したようなレイアウトパターンを使ってみると良いでしょう。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='9'>
-        <li>
-            <h4 id='Figmaの使い方'>
-                <span>Figmaの使い方</span>
-            </h4>
-            <p><span>9.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-1-2.html'><span>Figmaの特徴</span></a></p>
-            <p><span>9.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-1-2.html'><span>Figmaの基本操作（参考リンク）</span></a></p>
-            <p><span>9.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-3.html'><span>ダウンロード〜簡単な要素作成</span></a></p>
-            <p><span>9.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-4.html'><span>コンポーネント</span></a></p>
-            <p><span>9.5 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-5.html'><span>プロトタイプ制作</span></a></p>
-            <p><span>9.6 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-6.html'><span>デザインの共有</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>5. 手書きでラフ（図案）を描いてみる</span>
+        </div>
+        <div>
+            <span>いきなり画面でレイアウトを組んでみてもよいですが、設計図を一回書き出してみる感覚で手書きでラフを書いてみると良いでしょう。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='10'>
-        <li>
-            <h4 id='デザイン実務に入る前に'>
-                <span>デザイン実務に入る前に</span>
-            </h4>
-            <p><span>10.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-1.html'><span>Webサイト制作の主なフロー</span></a></p>
-            <p><span>10.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-2.html'><span>ヒアリングでクライアントを知る</span></a></p>
-            <p><span>10.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-3.html'><span>コンセプトはデザインの道しるべ</span></a></p>
-            <p><span>10.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-4.html'><span>競合との向き合い方</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>6. モノクロで組んでみる</span>
+        </div>
+        <div>
+            <span>手書きのラフができたら、モノクロ画像で画面上でレイアウトを組んでみます。</span>
+        </div>
+        <div>
+            <span>いきなり色付きで組み始めると、色にひっぱられてデザインを決める → でもやっぱり色変更でデザインも微妙に、というのを繰り返して時間がかかってしまうので、まずはすっきりとモノクロで組んでみましょう。</span>
+        </div>
+        <div>
+            <span>それでイメージと合致していれば次へ進みましょう。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='11'>
-        <li>
-            <h4 id='ロゴ制作実践'>
-                <span>ロゴ制作実践</span>
-            </h4>
-            <p><span>11.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/11-1.html'><span>ロゴの基本知識</span></a></p>
-            <p><span>11.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/11-2-3.html'><span>ロゴ制作のポイント</span></a></p>
-            <p><span>11.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/11-2-3.html'><span>トレース課題</span></a></p>
-            <p><span>11.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/11-4.html'><span>実践課題</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>7. フォントの可読性を高める</span>
+        </div>
+        <div>
+            <span>モノクロで組み終わったら、フォントを決めつつ文字の強弱をつけていきます。</span>
+        </div>
+        <div>
+            <span><a href='https://marinahara.github.io/design-curriculum/pages/5-3.html'><span>フォントの選び方</span></a>で学んだことを踏まえてターゲットや商品イメージに合ったフォントを選び、可読性を上げていきましょう。</span>
+        </div>
+        <div>
+            <span>強調したい文字だけ大きくしたり、太くしたり、配置を色々試したりして強弱をつけていきます。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='12'>
-        <li>
-            <h4 id='バナー制作実践'>
-                <span>バナー制作実践</span>
-            </h4>
-            <p><span>12.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/12-1.html'><span>バナーの基本知識</span></a></p>
-            <p><span>12.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/12-2-3.html'><span>バナー制作のポイント</span></a></p>
-            <p><span>12.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/12-2-3.html'><span>トレース課題</span></a></p>
-            <p><span>12.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/12-4.html'><span>実践課題</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>8. CTAボタン</span>
+        </div>
+        <div>
+            <span>必要に応じて、「詳しくはこちら」といったボタンをつけます。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>※CTA（Call To Action）：</span>
+        </div>
+        <div>
+            <span>ホームページを訪れたユーザーに購入や資料請求など、何かしらの行動を起こしてもらうための要素</span>
+        </div>
+        <div>
+            <a href='https://ferret-plus.com/8430#p5'><span>CTA参考サイト</span></a>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='13'>
-        <li>
-            <h4 id='メインビジュアル制作実践'>
-                <span>メインビジュアル制作実践</span>
-            </h4>
-            <p><span>13.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-1.html'><span>メインビジュアルの基本知識</span></a></p>
-            <p><span>13.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-2.html'><span>メインビジュアル制作のポイント</span></a></p>
-            <p><span>13.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-3.html'><span>Tips</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>9. カラーにする</span>
+        </div>
+        <div>
+            <span>色でイメージをコントロールしましょう。</span>
+        </div>
+    </p>
     <p>&nbsp;</p>
-    <ol start='13'>
-        <li>
-            <h4 id='ワイヤーフレーム・デザインカンプ制作実践'>
-                <span>ワイヤーフレーム・デザインカンプ制作実践</span>
-            </h4>
-            <p><span>10.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-1.html'><span>ロゴ制作のポイント</span></a></p>
-            <p><span>10.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-2.html'><span>実践課題</span></a></p>
-            <p><span>10.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-3.html'><span>Tips</span></a></p>
-        </li>
-    </ol>
+    <p>
+        <div>
+            <span>10. 遊び心を足す</span>
+        </div>
+        <div>
+            <span>フォントの中で遊べそうな文字を探しましょう。「ふわふわ」「とろっと」などの擬音は遊びポイントです！</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>11. 全体を整える</span>
+        </div>
+        <div>
+            <span>最後にフォントのカーニングや画像の配置を微調整します。文字数が少ないときは、真ん中にぎゅっと寄せて余白を活かすとスカスカに見えません。</span>
+        </div>
+    </p>
+    <p>
+        <span>また、最終確認は実際のサイズでしないと、「思ったより文字が見づらかった」、「素材の画質が荒かった」ということが起こってしまうので、実際のサイズで確認するようにしましょう。</span>
+    </p>
     <p>&nbsp;</p>
-    <ol start='14'>
-        <li>
-            <h4 id='Webサイトデザイン実践'>
-                <span>Webサイトデザイン実践</span>
-            </h4>
-            <p><span>10.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-1.html'><span>ロゴ制作のポイント</span></a></p>
-            <p><span>10.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-2.html'><span>実践課題</span></a></p>
-            <p><span>10.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-3.html'><span>Tips</span></a></p>
-        </li>
-    </ol>
+    <a href='https://marinahara.github.io/design-curriculum/'><span>目次へもどる</span></a>
 </div>
 </div>
 </body>
 </html>
+
+http://mainvisual.net-king.com/
