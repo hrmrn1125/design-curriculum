@@ -11,6 +11,8 @@ iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+.img-wrap {height: auto; width: 100%;}
+.img-wrap.half {height: auto; width: 50%;}
 #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
@@ -599,221 +601,169 @@ header, .context-menu, .megamenu-content, footer{
 
 
 :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>0 はじめに</title>
+</style><title>14. ​ワイヤーフレーム制作実践</title>
 </head>
 <body class='typora-export'>
 <div class='typora-export-content'>
 <div id='write'  class=''>
-    <h1 id='Web Design Curriculum'>
-        <span>Web Design Curriculum</span>
+    <h1 id='14. ​ワイヤーフレーム制作実践​'>
+        <span>14. ​ワイヤーフレーム制作実践</span>
     </h1>
     <p>&nbsp;</p>
-    <h2 id='はじめに'>
-        <span>はじめに</span>
+    <h2 id='14.1 ワイヤーフレームの基本知識'>
+        <span>14.1 ワイヤーフレームの基本知識</span>
     </h2>
-    <h3 id='Web Design Curriculum へようこそ！'>
-        <span>Web Design Curriculum へようこそ！</span>
-    </h3>
     <p>
-        <span>このカリキュラムは、Webデザインに必要な基本の考え方〜ツールの使い方〜実践までが学べるスタータープログラムです！</span>
+        <span>ここからワイヤーフレーム制作の実践に入ります！まずはワイヤーフレームに関する基本知識の解説をします。</span>
     </p>
     <p>&nbsp;</p>
-    <h3 id='このカリキュラムで想定している対象者について'>
-        <span>このカリキュラムで想定している対象者について</span>
-    </h3>
-    <ul>
-        <li><span>HTML, CSS の基本的な知識や記述を理解している</span></li>
-        <li><span>Webデザインの初学者である</span></li>
-    </ul>
-    <p>&nbsp;</p>
-    <h3 id='カリキュラムの進め方'>
-        <span>カリキュラムの進め方</span>
+    <h3>
+        <span>ワイヤーフレームとは</span>
     </h3>
     <p>
-        <span>このカリキュラムではWebデザインの基本的なトピックについて解説し、チャレンジ課題を提供します。</span>
-        <span>チャレンジ課題に取り組んだら、メンターへ提出してください。提出物を確認の上、メンターによるフィードバックコメントを返却します。フィードバックには時間がかかる場合がありますので、コメントを待つ間に次のトピックに着手することを推奨します。</span>
-        <span>カリキュラムを進めていく中で自力での解決が困難な問題に直面したり、内容に対して疑問点がある時はSlackや、各デザインツールにコメントを記載してください。</span>
+    <span>【デザインカンプとは】</span>
     </p>
-    <p>&nbsp;</p>
     <p>
-        <span>それでは、はりきって進めていきましょう！！</span>
+    <span>デザインカンプとは、デザインの完成見本のこと。Design Comprehensive Layoutの略で、単に「カンプ」と呼ばれることもあります。</span>
+    </p>
+    <p>
+    <span>用語の定義などは10-2で説明した通りなので割愛します。</span>
+    </p>
+    <p>
+    <span>【デザインカンプを作る際のポイント】</span>
+    </p>
+    <h3>
+    <span>ワイヤーフレームそっくりそのまま、はNG</span>
+    </h3>
+    <p>
+    <div>
+        <span>「もうワイヤーフレームできてるし、あとはその通り画像入れて説明文決めて、色をつければデザイン完成でしょ？」と思う方もいるかもしれません。</span>
+    </div>
+    <div>
+        <span>しかしながらそうではありません！何故かと言うと、ワイヤーフレームでは細かい要素のサイズや配置が決まっておらず、その細かい部分（ディティール）のデザイン次第で、ビジュアルクオリティおよびUI/UXが全く変わってくるからです。</span>
+    </div>
+    </p>
+    <p>
+    <span>具体例を挙げます。まずはよくある、電話番号等が載った「お問い合わせはこちら」エリアのデザインの、良い例と悪い例です。</span>
+    </p>
+    <p>
+    <div>
+        <span>いかがでしょうか？悪い例はほぼワイヤーフレーム通りで、どの情報を強調したいのか分からず、電話番号・メールフォームへの導線が見にくいので、ユーザーもアクションが取りづらそうな印象です。また見出しも中途半端に改行されて読みづらいです。</span>
+    </div>
+    <div>
+        <span>良い例は2等分でバランスが良く、中途半端な改行もなく、目立たせたい要素を強調できています。メールフォームへの導線には矢印をつけており、ユーザーがクリックしやすくなっています。</span>
+    </div>
+    <div>
+        <span>このように、ワイヤーフレームの姿形そのままをデザインに落とし込もうとせず、これらの要素を分かりやすく伝えることができる良いレイアウト方法はないか？を考えてみることが重要です。</span>
+    </div>
+    </p>
+    <p>
+    <span>さらに例を挙げます。今度はフッターです。</span>
+    </p>
+    <p>
+    <div>
+        <span>今回は悪い例の方もパッと見バランスが取れているのでよいのでは？と思われるかもしれません。</span>
+    </div>
+    <div>
+        <span>しかしながら、メリハリがなく階層がないので、情報の分類がよく分からなくなってしまっています。</span>
+    </div>
+    </p>
+    <p>
+    <span>さらに発展的な例を挙げます。メインビジュアルの落とし込みです。</span>
+    </p>
+    <p>
+    <div>
+        <span>「ボタンも配置も何もかもワイヤーフレームと違うけど大丈夫なのか？」と思われるかもしれません。</span>
+    </div>
+    <div>
+        <span>ただ、前述した通り基本的にワイヤーフレームはあくまでざっくりと、どの情報をどこに置いたらよいか、を決めただけのものであることが多いです。</span>
+    </div>
+    <div>
+        <span>なのでこのくらい思い切って、ワイヤーフレームから変更してみても良いのです。（特に自分以外がワイヤーフレームを作って、自分がデザインに落とし込む場合）</span>
+    </div>
+    <div>
+        <span>根本的に大切なことは、自分自身がユーザの目線に立ち、どういったデザインにすればユーザにとって内容が分かりやすいのか？を、自分の頭で考えることです。</span>
+    </div>
+    <div>
+        <span>それがデザイナーの介在価値につながります。</span>
+    </div>
+    </p>
+    <h3>
+    <span>情報を理解・解釈して+αを提案する</span>
+    </h3>
+    <p>
+    <div>
+        <span>次に意識していただきたいのが、「自分なりに情報の解釈をして、情報の見せ方を整える」ということです。</span>
+    </div>
+    <div>
+        <span>ワイヤーフレームの中の情報を解釈し、ターゲットは誰なのか、何を、どのように伝え、どうなってほしいのか？という考察に基づくデザイン提案ができると理想的です。</span>
+    </div>
+    <div>
+        <span>手法は様々ですが、ここでは簡単にできる3つの実践例をご紹介します。</span>
+    </div>
+    </p>
+    <p>
+    <div>
+        <span>1.「イメージ」の内容を自分で決める</span>
+    </div>
+    <div>
+        <span>ワイヤーフレーム作成者は、隣り合う文章の内容を補足するビジュアルが欲しい、という意図でこの「イメージ」という言葉をよく用います。この時、まずはその文章をしっかりと読んで内容を理解しましょう。</span>
+    </div>
+    <div>
+        <span>雰囲気や実際の様子を示す場合は写真を、関係性や数値を見せた方がユーザに伝わりやすい場合は図にするという選択肢もあります。</span>
+    </div>
+    <div>
+        <span>どちらが最適かは、デザイナーが内容を読み取って判断して提案してみるのが良いと思います。</span>
+    </div>
+    </p>
+    <p>
+    <span>上記の例は、文字だけで見ると内容が少し伝わりづらいため、図を活用した方が分かりやすくなっているという例です。</span>
+    </p>
+    <p>
+    <div>
+        <span>2.既に決められた文章を調整する</span>
+    </div>
+    <div>
+        <span>プロジェクトによっては文章を一文字たりとも変更してはいけないものもありますが、そうでない場合はデザイナー側から積極的に文章の変更を提案しても良いと思います。</span>
+    </div>
+    <div>
+        <span>というのも、言葉は非常に重要なインターフェイスの一つなのです。ワイヤーフレームには必ずしも最適な表現が使われているわけではないことを頭に入れておきましょう。</span>
+    </div>
+    <div>
+        <span>特に重要なのは、見出しで結論を伝えることです。</span>
+    </div>
+    <div>
+        <span>ユーザはその結論が自分にとって興味のある内容かどうかで、以降の内容を読み進めるかどうかを判断するため、ワイヤーフレームでその条件が満たされていない場合には積極的に提案すると良いでしょう。</span>
+    </div>
+    </p>
+    <p>
+    <span>上記の例で分かる通り、結論を抜き出して見出しをつけるだけで格段に見やすく、分かりやすくなります。</span>
+    </p>
+    <p>
+    <div>
+        <span>3.最適なインタラクションを積極的に提案する</span>
+    </div>
+    <div>
+        <span>インタラクションデザインに関しては、●</span>
+    </div>
+    <div>
+        <span>というのも、言葉は非常に重要なインターフェイスの一つなのです。ワイヤーフレームには必ずしも最適な表現が使われているわけではないことを頭に入れておきましょう。</span>
+    </div>
+    <div>
+        <span>特に重要なのは、見出しで結論を伝えることです。</span>
+    </div>
+    <div>
+        <span>ユーザはその結論が自分にとって興味のある内容かどうかで、以降の内容を読み進めるかどうかを判断するため、ワイヤーフレームでその条件が満たされていない場合には積極的に提案すると良いでしょう。</span>
+    </div>
+    </p>
+    <p>
+    <span>上記の例で分かる通り、結論を抜き出して見出しをつけるだけで格段に見やすく、分かりやすくなります。</span>
     </p>
     <p>&nbsp;</p>
-    <h2 id='目次'>
-        <span>目次</span>
-    </h2>
-    <ol start=''>
-        <li>
-            <h4 id='デザインとは'>
-                <span>デザインとは（1〜4まで共通ページに飛びます）</span>
-            </h4>
-            <p><span>1.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>UIとUXの密接なかかわり</span></a></p>
-            <p><span>1.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>デザインとは何か</span></a></p>
-            <p><span>1.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/1-1-3.html'><span>デザインの必要性</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='2'>
-        <li>
-            <h4 id='インターフェースデザインのポイント'>
-                <span>インターフェースデザインのポイント</span>
-            </h4>
-            <p><span>2.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/2-1.html'><span>入力手段により異なる適したUI</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='3'>
-        <li>
-            <h4 id='人間の認知特性とデザイン'>
-                <span>人間の認知特性とデザイン（1〜3まで共通ページに飛びます）</span>
-            </h4>
-            <p><span>3.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>色を瞬時に見分ける力</span></a></p>
-            <p><span>3.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>形を瞬時に見分ける力</span></a></p>
-            <p><span>3.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/3-1-3.html'><span>動きや変化を見つける力</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='4'>
-        <li>
-            <h4 id='配色に関して'>
-                <span>配色に関して</span>
-            </h4>
-            <p><span>4.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-1.html'><span>色のもつ意味</span></a></p>
-            <p><span>4.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-2-3.html'><span>基本的な配色パターン</span></a></p>
-            <p><span>4.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/4-2-3.html'><span>ターゲットに合わせた配色をする</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='5'>
-        <li>
-            <h4 id='タイポグラフィ・フォントに関して'>
-                <span>タイポグラフィ・フォントに関して</span>
-            </h4>
-            <p><span>5.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-1.html'><span>タイポグラフィとは</span></a></p>
-            <p><span>5.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-2.html'><span>基本的なフォント</span></a></p>
-            <p><span>5.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-3.html'><span>フォントの選び方</span></a></p>
-            <p><span>5.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-4.html'><span>文字組みの基本的なテクニック</span></a></p>
-            <p><span>5.5 </span><a href='https://marinahara.github.io/design-curriculum/pages/5-5.html'><span>文字のレイアウト</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='6'>
-        <li>
-            <h4 id='Illustratorの使い方'>
-                <span>Illustratorの使い方</span>
-            </h4>
-            <p><span>6.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/6-1-2.html'><span>Illustratorの特徴</span></a></p>
-            <p><span>6.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/6-1-2.html'><span>ベクター画像とビットマップ画像</span></a></p>
-            <p><span>6.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/6-3.html'><span>Illustratorの基本操作</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='7'>
-        <li>
-            <h4 id='Photoshopの使い方'>
-                <span>Photoshopの使い方</span>
-            </h4>
-            <p><span>7.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/7-1.html'><span>​Photoshopの特徴</span></a></p>
-            <p><span>7.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/7-2.html'><span>Photoshopの基本操作</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='8'>
-        <li>
-            <h4 id='Adobe XDの使い方'>
-                <span>Adobe XDの使い方</span>
-            </h4>
-            <p><span>8.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/8-1.html'><span>XDの特徴</span></a></p>
-            <p><span>8.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/8-2.html'><span>XDの基本操作</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='9'>
-        <li>
-            <h4 id='Figmaの使い方'>
-                <span>Figmaの使い方</span>
-            </h4>
-            <p><span>9.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-1-2.html'><span>Figmaの特徴</span></a></p>
-            <p><span>9.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-1-2.html'><span>Figmaの基本操作（参考リンク）</span></a></p>
-            <p><span>9.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-3.html'><span>ダウンロード〜簡単な要素作成</span></a></p>
-            <p><span>9.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-4.html'><span>コンポーネント</span></a></p>
-            <p><span>9.5 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-5.html'><span>プロトタイプ制作</span></a></p>
-            <p><span>9.6 </span><a href='https://marinahara.github.io/design-curriculum/pages/9-6.html'><span>デザインの共有</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='10'>
-        <li>
-            <h4 id='デザイン実務に入る前に'>
-                <span>デザイン実務に入る前に</span>
-            </h4>
-            <p><span>10.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-1.html'><span>Webサイト制作の主なフロー</span></a></p>
-            <p><span>10.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-2.html'><span>ヒアリングでクライアントを知る</span></a></p>
-            <p><span>10.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-3.html'><span>コンセプトはデザインの道しるべ</span></a></p>
-            <p><span>10.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/10-4.html'><span>競合との向き合い方</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='11'>
-        <li>
-            <h4 id='ロゴ制作実践'>
-                <span>ロゴ制作実践</span>
-            </h4>
-            <p><span>11.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/11-1.html'><span>ロゴの基本知識</span></a></p>
-            <p><span>11.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/11-2-3.html'><span>ロゴ制作のポイント</span></a></p>
-            <p><span>11.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/11-2-3.html'><span>トレース課題</span></a></p>
-            <p><span>11.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/11-4.html'><span>実践課題</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='12'>
-        <li>
-            <h4 id='バナー制作実践'>
-                <span>バナー制作実践</span>
-            </h4>
-            <p><span>12.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/12-1.html'><span>バナーの基本知識</span></a></p>
-            <p><span>12.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/12-2-3.html'><span>バナー制作のポイント</span></a></p>
-            <p><span>12.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/12-2-3.html'><span>トレース課題</span></a></p>
-            <p><span>12.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/12-4.html'><span>実践課題</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='13'>
-        <li>
-            <h4 id='メインビジュアル制作実践'>
-                <span>メインビジュアル制作実践</span>
-            </h4>
-            <p><span>13.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-1.html'><span>メインビジュアルの基本知識</span></a></p>
-            <p><span>13.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-2-3.html'><span>メインビジュアル制作のポイント</span></a></p>
-            <p><span>13.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-2-3.html'><span>トレース課題</span></a></p>
-            <p><span>13.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-4.html'><span>実践課題</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='14'>
-        <li>
-            <h4 id='ワイヤーフレーム制作実践'>
-                <span>ワイヤーフレーム制作実践</span>
-            </h4>
-            <p><span>14.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/14-1.html'><span>ワイヤーフレームの基本知識</span></a></p>
-            <p><span>14.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/14-2-3.html'><span>ワイヤーフレーム制作のポイント</span></a></p>
-            <p><span>14.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/14-2-3.html'><span>トレース課題</span></a></p>
-            <p><span>14.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/14-4.html'><span>実践課題</span></a></p>
-        </li>
-    </ol>
-    <p>&nbsp;</p>
-    <ol start='15'>
-        <li>
-            <h4 id='デザインカンプ制作実践'>
-                <span>デザインカンプ制作実践</span>
-            </h4>
-            <p><span>15.1 </span><a href='https://marinahara.github.io/design-curriculum/pages/14-1.html'><span>デザインカンプの基本知識</span></a></p>
-            <p><span>15.2 </span><a href='https://marinahara.github.io/design-curriculum/pages/14-2-3.html'><span>デザインカンプ制作のポイント</span></a></p>
-            <p><span>15.3 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-2-3.html'><span>トレース課題</span></a></p>
-            <p><span>15.4 </span><a href='https://marinahara.github.io/design-curriculum/pages/13-4.html'><span>実践課題</span></a></p>
-        </li>
-    </ol>
+    <a href='https://marinahara.github.io/design-curriculum/'><span>目次へもどる</span></a>
 </div>
 </div>
 </body>
 </html>
+
+http://mainvisual.net-king.com/
