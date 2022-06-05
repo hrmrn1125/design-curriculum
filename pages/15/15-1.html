@@ -12,6 +12,7 @@ a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
 .img-wrap {height: auto; width: 100%;}
+.img-wrap.half {height: auto; width: 50%;}
 #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
@@ -600,84 +601,251 @@ header, .context-menu, .megamenu-content, footer{
 
 
 :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>2. インターフェースデザインのポイント</title>
+</style><title>14. ​ワイヤーフレーム制作実践</title>
 </head>
 <body class='typora-export'>
 <div class='typora-export-content'>
 <div id='write'  class=''>
-    <h1 id='2. インターフェースデザインのポイント​'>
-        <span>2. インターフェースデザインのポイント</span>
+    <h1 id='14. ​ワイヤーフレーム制作実践​'>
+        <span>14. ​ワイヤーフレーム制作実践</span>
     </h1>
     <p>&nbsp;</p>
-    <h2 id='2.1 入力手段により異なる適したUI'>
-        <span>2.1 入力手段により異なる適したUI</span>
+    <h2 id='14.1 ワイヤーフレームの基本知識'>
+        <span>14.1 ワイヤーフレームの基本知識</span>
     </h2>
     <p>
-        <span>入力手段が異なれば、それにふさわしいインターフェースも変わってきます。</span>
+        <span>ここからワイヤーフレーム制作の実践に入ります！</span>
+    </p>
+    <p>
+        <div>
+            <span>ワイヤーフレームの言葉や役割自体に関しては10-1で説明していますので省略します。</span>
+        </div>
+        <div>
+            <a href='https://marinahara.github.io/design-curriculum/pages/10/10-1.html'><span>Webサイト制作の主なフロー</span></a>
+        </div>
     </p>
     <p>&nbsp;</p>
-    <h3 id='ポインティング操作（＝PC）'>
-        <span>ポインティング操作（＝PC）</span>
+    <h3>
+        <span>ワイヤーフレームの作り方</span>
     </h3>
-    <ul>
-        <li><span>細かいパーツでもOK（マウスやトラックパッドは細かい操作がしやすいため）</span></li>
-        <li><span>（スペース等）制約が少なく、自由度が高い</span></li>
-        <li><span>ホバーを織り込んだデザインになることが特徴</span></li>
-    </ul>
-    <p>&nbsp;</p>
-    <h3 id='直接接触（＝スマートフォン・タブレット）'>
-        <span>直接接触（＝スマートフォン・タブレット）</span>
-    </h3>
-    <ul>
-        <li><span>要素は大きめに（指やタッチペンは細かい動きが難しい）</span></li>
-        <li><span>アイコンを活用（省スペースのため）</span></li>
-        <li><span>ホバーが無い → 選択できるか触ってみないと分からない → 誤操作回避のためにも単純明快なデザインが必要</span></li>
-    </ul>
-    <p>&nbsp;</p>
     <p>
-        <span>【例1 カルーセル】</span>
-    </p>
-    <p>
-        <span>ポインティング操作（PC）</span>
-    </p>
-    <div class="img-wrap">
-        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/crsl-ex-pc.png'></img>
-    </div>
-    <p>
-        <span>PCにはスワイプが無いので矢印等を末尾に設置するのが良い。</span>
+        <span>次にワイヤーフレームの作り方を見ていきます。</span>
     </p>
     <p>&nbsp;</p>
     <p>
-        <span>直接接触（スマートフォン・タブレット）</span>
-    </p>
-    <div class="img-wrap">
-        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/crsl-ex-sp.png'></img>
-    </div>
-    <p>
-        <span>スワイプを前提とする。見切れ表示で続きがあることを暗示。</span>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-        <span>【例2 プルダウン】</span>
-    </p>
-    <p>
-        <span>ポインティング操作（PC）</span>
-    </p>
-    <div class="img-wrap">
-        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/pulldown-pc.png'></img>
-    </div>
-    <p>
-        <span>PCでは小さく配置。見出しタイトルはテキスト主体でレイアウト。</span>
+        <div>
+            <span>1.サイトマップを作る（把握する）</span>
+        </div>
+        <div>
+            <span>ワイヤーフレームは「ホームページの個別のページの間取り図」のようなものであるため、そもそもどういうページを作成するのかを決める必要があります。</span>
+        </div>
+        <div>
+            <span>そのため、どこにどういうページがあるのか（どういうページを作るのか）を知る必要があります。それにはサイトマップが必要です。</span>
+        </div>
+        <div>
+            <span>ただ、サイトマップはデザイナーが必ず作るというわけではないので、ここでは参考サイトを示すにとどめておきます。</span>
+        </div>
+        <div>
+            <a href='https://web-kanji.com/posts/making-sitemap-by-excel'><span>サイトマップの作り方参考</span></a>
+        </div>
     </p>
     <p>&nbsp;</p>
     <p>
-        <span>直接接触（スマートフォン・タブレット）</span>
+        <div>
+            <span>2.ワイヤーフレームを作るページを決める</span>
+        </div>
+        <div>
+            <span>次に、ワイヤーフレームを作るページを決めます。</span>
+        </div>
+        <div>
+            <span>当然全てのページをワイヤーフレームにするのが最も理想的ですが、ページ数が多い場合などは大変な作業になってしまいます。</span>
+        </div>
+        <div>
+            <span>そのため、同様のレイアウトのページのワイヤーフレームは1つ作って終わりにする、重要なページのみ制作する、という工夫が必要になってきます。</span>
+        </div>
     </p>
-    <div class="img-wrap">
-        <img class="ui-ux" src='https://marinahara.github.io/design-curriculum/assets/images/pulldown-sp.png'></img>
-    </div>
+    <p>&nbsp;</p>
     <p>
-        <span>タップしやすいよう大きく配置。全ての要素が大きいとごちゃつくので、アイコンを活用し、省スペース化を図る。</span>
+        <div>
+            <span>3.ページのレイアウトを決める</span>
+        </div>
+        <div>
+            <span>ワイヤーフレームを作成するページが決まったら、大枠のレイアウトを決めます。</span>
+        </div>
+        <div>
+            <span>ホームページの目的に沿って、どのレイアウトを採用するかを決めましょう。</span>
+        </div>
+        <div>
+            <span>以下にいくつか代表的なレイアウトを示しておきます。</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>【1カラムレイアウト】</span>
+        </div>
+        <div>
+            <span>カラムとは「列」のことです。1カラムは1列にコンテンツを縦に並べるレイアウトのことです。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>◎メリット：</span>
+        </div>
+        <div>
+            <span>・画面を横に大きく使うため、インパクトを与えやすい</span>
+        </div>
+        <div>
+            <span>・上から順番に見えてくるため、ストーリーの流れが作りやすい</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>×デメリット：</span>
+        </div>
+        <div>
+            <span>・コンテンツの量が多いと縦に長くなりすぎるため、読みにくい</span>
+        </div>
+        <div>
+            <span>・品質の高い画像や動画などの素材がないと寂しく見えてしまう</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>【タイル型レイアウト】</span>
+        </div>
+        <div>
+            <span>コンテンツの要素を「タイル状」にして並べるレイアウトです。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>◎メリット：</span>
+        </div>
+        <div>
+            <span>・たくさんのコンテンツを並べられる</span>
+        </div>
+        <div>
+            <span>・情報が区切られていて探しやすい</span>
+        </div>
+        <div>
+            <span>・SP対応しやすい</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>×デメリット：</span>
+        </div>
+        <div>
+            <span>・掲載できる情報量が限定的</span>
+        </div>
+        <div>
+            <span>・コンテンツに優先順位や強弱をつけにくい</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>【マルチカラムレイアウト】</span>
+        </div>
+        <div>
+            <span>1カラムレイアウトとタイル型レイアウトを組み合わせたレイアウトです。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>◎メリット：</span>
+        </div>
+        <div>
+            <span>・情報を非常に整理しやすい</span>
+        </div>
+        <div>
+            <span>・優先して見せたい情報は大きく表示するなど強弱がつけやすい</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>×デメリット：</span>
+        </div>
+        <div>
+            <span>・（タイル型と同じく）掲載できる情報量が限定的</span>
+        </div>
+        <div>
+            <span>・1カラムやタイル型と比べてSP対応しにくい</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>【サイドバー固定レイアウト】</span>
+        </div>
+        <div>
+            <span>サイドバーを固定し、スクロールしても常に表示されているようにするレイアウトです。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>◎メリット：</span>
+        </div>
+        <div>
+            <span>メニュー（サイドバー）を常に表示できるので、ユーザーが迷いにくい</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>×デメリット：</span>
+        </div>
+        <div>
+            <span>SPで閲覧するときには使用できない</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>4.ワイヤーフレームを書く</span>
+        </div>
+        <div>
+            <span>1ページをいくつかの要素に分けて設計していきます。HTMLに詳しい皆さんなら要素分けは大丈夫かと思います。</span>
+        </div>
+        <div>
+            <span>各要素を配置するとき気を付けることを挙げておきます。</span>
+        </div>
+    </p>
+    <p>
+        <div>
+            <span>【ヘッダー・グローバルナビゲーション】</span>
+        </div>
+        <div>
+            <span>・サイト全体の目次として情報を整理する</span>
+        </div>
+        <div>
+            <span>・どのページからでもエントリーできるように（どのページもここのカテゴリに属する・戻ってこれるように）する</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>【コンテンツエリア】</span>
+        </div>
+        <div>
+            <span>・全てのコンテンツを並べてはいけない（「特にユーザーに見て欲しい情報」に絞る）</span>
+        </div>
+        <div>
+            <span>・見せたいコンテンツから順番に並べる</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>【フッター】</span>
+        </div>
+        <div>
+            <span>・ここもサイトの全体像がわかるように目次として使う</span>
+        </div>
+        <div>
+            <span>・ヘッダーと違いフッターは縦幅が大きくなっても大丈夫なので、ページをできるだけ掲載する</span>
+        </div>
     </p>
     <p>&nbsp;</p>
     <a href='https://marinahara.github.io/design-curriculum/'><span>目次へもどる</span></a>
