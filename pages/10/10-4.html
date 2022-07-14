@@ -611,88 +611,79 @@ header, .context-menu, .megamenu-content, footer{
         <span>10. ​Figmaの使い方</span>
     </h1>
     <p>&nbsp;</p>
-    <h2 id='10.3 ​コンポーネント'>
-        <span>10.3 ​コンポーネント</span>
+    <h2 id='10.4 ​プロトタイプ制作'>
+        <span>10.4 ​プロトタイプ制作</span>
     </h2>
-    <h3>
-        <span>コンポーネントとは</span>
-    </h3>
     <p>
-        <span>UIデザインにおけるコンポーネントとは、デザイン全体で再利用できるUIの要素のことをいいます。</span>
-    </p>
-    <p>
-        <span>ボタンやアイコン、ヘッダー、フッターなど、同じデザインの要素を各ページで毎回つくるのではなく、再利用することで作業時間の短縮、プロジェクトで一貫したデザインの作成、メンテナンスしやすいデザインデータを作ることができます。</span>
-    </p>
-    <p>&nbsp;</p>
-    <h3>
-        <span>ボタンをコンポーネント化</span>
-    </h3>
-    <p>
-        <span>（1）コンポーネント化するには作成したボタンを選択し、右クリックで Create Component を選択します。</span>
-        <span> ショートカットキーは ⌘ + Option + K （Win: Ctrl + K） です。</span>
+        <span>（1）2つ画面（Frame）を用意し、1つ以上ずつボタンを置きましょう。</span>
     </p>
     <p>&nbsp;</p>
     <p>
-        <span>（2）画面左側のレイヤーパネルの表示が4つのひし形に変わったのが確認できます。</span>
-        <p>&nbsp;</p>
-        <div class="img-wrap">
-            <img class="ui-ux" src='https://hrmrn1125.github.io/design-curriculum/assets/images/10/master.png'></img>
+        <div>
+            <span>（2）次は画面遷移の設定をするプロトタイプモードに切り替えます。</span>
         </div>
-        <p>&nbsp;</p>
-    </p>
-    <p>
-        <span> この4つのひし形の要素を「マスターコンポーネント」と呼びます。</span>
-        <span> このマスターコンポーネントを再利用することで作業の効率化などを図ることができます。</span>
-    </p>
-    <p>
-        <span> マスターコンポーネントからコピーして制作した要素を「インスタンス」と呼び、コンポーネントを再利用した要素となります。</span>
-    </p>
-    <p>
-        <span> インスタンスはマスターコンポーネントで編集した色やテキストのプロパティを引き継ぐことができ、他のマスターコンポーネントに瞬時に切り替えたり、一部の要素を上書きすることができます。</span>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-        <span>（3）インスタンスはマスターコンポーネントのプロパティを引き継ぐだけでなく、テキストやプロパティを直接上書き（Override）することができます。</span>
-    </p>
-    <p>
-        <span> 例えば、ボタンは使われるシーンによって「登録する」や「キャンセル」といった文言に変わるので、必要に応じてインスタンス上書きすることができます。</span>
-        <span> 位置やサイズは上書きすることができません。</span>
-    </p>
-    <p>
-        <span> 位置やサイズを変更したい場合は、インスタンスを右クリックから Detach Instance でインスタンス自体を解除することで変更できます。</span>
-        <span> ショートカットキーは ⌘ + Option + B （Win: Ctrl + B）です。</span>
-    </p>
-    <p>
-        <span> 再びインスタンスに戻すことはできないので、注意してください。</span>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-        <span>（4）コンポーネントのメリットは他にもあり、既存のインスタンスを他のマスターコンポーネントのインスタンスに変更することもできます。</span>
-        <span> プロパティパネルのInstanceから他のマスターコンポーネントを選択することで、背景の色などを他のマスターコンポーネント同様に変えることができます。</span>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-        <span>（5）コンポーネントは、主に要素自体を再利用していましたが、色やフォントなどのプロパティは Stylesに登録することで再利用が可能になります。</span>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-        <span>（6）実際にスタイルを作ってみましょう。
-    </p>
-    <p>
-        <span>四角形の要素を3つ用意して、それぞれの Fill を赤、青、緑で区分しておきます。</span>
-    </p>
-    <p>
-        <span> 赤をクリックして、Fill の右の4つの●をクリックし、さらに + をクリックして、スタイル名を「figma_red」と入力します。</span>
+        <div>
+            <span> プロトタイプモードにするには、プロパティパネルの上にあるPrototypeタブをクリックします。</span>
+        </div>
         <p>&nbsp;</p>
         <div class="img-wrap half">
-            <img class="ui-ux" src='https://hrmrn1125.github.io/design-curriculum/assets/images/10/dots.png'></img>
+            <img class="ui-ux" src='https://hrmrn1125.github.io/design-curriculum/assets/images/10/prototype-tab.png'></img>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>（3）プロトタイプモードで要素を選択すると、その要素の右側に白い◯が表示されているのが分かります。</span>
+        </div>
+        <div>
+            <span> その白い◯をマウスカーソルでドラッグすると矢印が伸びます。</span>
+        </div>
+        <div>
+            <span> この矢印で、要素を押したときの画面遷移先を設定できます。</span>
+        </div>
+        <div>
+            <span> 一つ目の画面のボタンから、二つ目の画面へ矢印をくっつけてみてください。</span>
         </div>
         <p>&nbsp;</p>
         <div class="img-wrap">
-            <img class="ui-ux" src='https://hrmrn1125.github.io/design-curriculum/assets/images/10/style.png'></img>
+            <img class="ui-ux" src='https://hrmrn1125.github.io/design-curriculum/assets/images/10/transfer.png'></img>
         </div>
-        <p>&nbsp;</p>
-        <span> これで色のスタイルが作成されました。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <div>
+            <span>（4）ボタンを押したときの画面遷移を設定したので、実際にプロトタイプを触ってみましょう。</span>
+        </div>
+        <div>
+            <span> 画面右上の再生ボタン▷を押すと、新しいタブでプレゼンテーションモードが立ち上がります。</span>
+        </div>
+        <div>
+            <span> プレゼンテーションモードでは実際の挙動を試すことができます。</span>
+        </div>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>（5）遷移方法を設定するには、編集したい遷移（矢印）を選択してプロパティパネル（Prototypeタブ）の、Transition を変更します。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>（6）Transitionが instant（一瞬で切り替え）になっているので、進む方を Slide In、戻る方を Slide Out に変更します。 </span>
+        <span> もう一度プレゼンテーションモードで確認すると、左右から画面が現れるようになっているでしょう。</span>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        <span>（7）表示する画面の縦幅を長くすることで、画面をスクロールできるようになります。</span>
+    </p>
+    <p>
+        <span> このとき、ボタンの高さも一緒に長くなるときがありますが、これはボタンが画面のサイズに合わせて拡大縮小（Scale）する設定になっているからです。解決方法は下記となります。</span>
+    </p>
+    <p>
+        <div>
+            <span> 1: ⌘（Win: Ctrl）を押しながらFrameをドラッグする</span>
+        </div>
+        <div>
+            <span> 2: ボタンの Constraint を Scale 以外にする</span>
+        </div>
     </p>
     <p>&nbsp;</p>
     <a href='https://hrmrn1125.github.io/design-curriculum/'><span>目次へもどる</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://hrmrn1125.github.io/design-curriculum/pages/10/10-3.html'><span>前章へ</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://hrmrn1125.github.io/design-curriculum/pages/10/10-5.html'><span>次章へ</span></a>
